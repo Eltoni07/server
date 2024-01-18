@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server IP</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('imageofserver.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .button {
+            display: inline-block;
+            margin: 20px;
+            padding: 15px 30px;
+            font-size: 18px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            background-color: #3498db;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Server IP</h1>
+    <p id="ipAddress">Loading...</p>
+
+    <button class="button" onclick="goToServer('9993')">9993</button>
+    <button class="button" onclick="goToServer('9994')">9994</button>
+    <button class="button" onclick="goToServer('9995')">9995</button>
+
+    <script>
+        async function updateIP() {
+            try {
+                const response = await fetch('get-ip.php');
+                const ipAddress = await response.text();
+                document.getElementById('ipAddress').textContent = `The current IP address is: ${ipAddress}`;
+            } catch (error) {
+                console.error('Error fetching IP address:', error);
+                document.getElementById('ipAddress').textContent = 'Error fetching IP address';
+            }
+        }
+
+        function goToServer(port) {
+            updateIP().then(() => {
+                const ipAddress = document.getElementById('ipAddress').textContent.split(' ').pop();
+                window.location.href = `http://${ipAddress}:${port}`;
+            });
+        }
+
+        // Initial IP update
+        updateIP();
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #242424, #121212);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  background: url('imageofserver.jpg') center/cover;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  background-color: rgba(26, 106, 175, 0.9);
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: 36px;
+}
+
+.subtitle {
+  font-size: 20px;
+}
+
+.input-container {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+input {
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  margin-right: 10px;
+  outline: none;
+}
+
+button {
+  padding: 14px 24px;
+  font-size: 18px;
+  background-color: #1a6aaf;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease-in-out;
+  outline: none;
+}
+
+button:hover {
+  background-color: #155482;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(26, 106, 175, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  margin-top: auto;
+}
+
+.footer p {
+  font-size: 14px;
+}
+
+#resetButton {
+  margin-top: 20px;
+}
+
+#advancedSettings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#advancedSettings input {
+  margin: 10px 0;
+}
+
+#advancedSettings button {
+  margin-top: 10px;
+}
+#publicServerButton {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #1a6aaf;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-left: auto; /* This will push the button to the right */
+  outline: none;
+}
+
+#publicServerButton:hover {
+  background-color: #155482;
+}

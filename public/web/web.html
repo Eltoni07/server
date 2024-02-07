@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server Buttons</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('imageofserver.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .button {
+            display: inline-block;
+            margin: 20px;
+            padding: 15px 30px;
+            font-size: 18px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            background-color: #3498db;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Server Buttons</h1>
+
+    <button class="button" onclick="goToServer(9993)">9993</button>
+    <button class="button" onclick="goToServer(9994)">9994</button>
+    <button class="button" onclick="goToServer(9995)">9995</button>
+
+    <script>
+        function goToServer(port) {
+            window.location.href = `http://eltoni.ddns.net:${port}`;
+        }
+    </script>
+
+</body>
+</html>

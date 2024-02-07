@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <h1>SHENO PASSWORDIN</h1>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Page</title>
+    <style>
+        body {
+            background-color: #223442;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+
+        #passwordBox {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            width: 300px;
+        }
+
+        #passwordInput {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        #submitButton {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="passwordBox">
+        <p>sheno passwordin</p>
+        <input type="password" id="passwordInput" oninput="validatePassword()">
+        <button id="submitButton" onclick="validatePassword()">Submit</button>
+    </div>
+
+    <script>
+        function validatePassword() {
+            var enteredPassword = document.getElementById('passwordInput').value;
+            var correctPassword = '123012@';
+
+            if (enteredPassword === correctPassword) {
+                window.location.href = 'web/web.html';
+            }
+        }
+    </script>
+</body>
+</html>

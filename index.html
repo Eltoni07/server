@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>File Transfer Server</title>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <button id="publicServerButton">Public Server</button>
+
+      <h1>Server for File Transfer</h1>
+      <p class="subtitle" id="statusMessage">Vendos Kodin:</p>
+      <div class="input-container" id="inputContainer">
+        <input type="number" id="serverInput" placeholder="Enter a number">
+        <button id="redirectButton">Go</button>
+      </div>
+      <button id="resetButton" style="display:none;">Ndrysho Kodin Kryesor</button>
+      <div id="advancedSettings" style="display:none;">
+        <input type="number" id="mainPortInput" placeholder="Vendos Portin Kryesor">
+        <input type="number" id="secondaryPortInput" placeholder="Vendos Kodin">
+        <button id="advancedRedirectButton">Go</button>
+      </div>
+    </header>
+  </div>
+
+  <script src="script.js"></script>
+
+  <footer class="footer">
+    <p>This website and its contents are the exclusive property of Elton Kafexholli. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
